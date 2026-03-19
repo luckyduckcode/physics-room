@@ -1,0 +1,800 @@
+[
+  {
+    "timestamp": "2026-03-17T08:23:53.743656+00:00",
+    "session_id": "manifest-demo",
+    "source": "coordinator",
+    "event_type": "session.lifecycle",
+    "sequence": 1,
+    "payload": {
+      "action": "start",
+      "tick": 0,
+      "runtime": "fallback",
+      "metadata": {
+        "config_hash": "698da2981b51f9370a176ae26f6ff4527f4feeff8a639bb6d2b4c46af020e85d",
+        "code_version": "unknown",
+        "seed": 42,
+        "created_at_ns": 1773735833743482000
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.749141+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 2,
+    "payload": {
+      "tick": 1,
+      "active_voxels": 64,
+      "stable_voxels": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.749151+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 3,
+    "payload": {
+      "tick": 1,
+      "energy": 1.5,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.749155+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 4,
+    "payload": {
+      "tick": 1,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.749163+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 5,
+    "payload": {
+      "tick": 1,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.749191+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 6,
+    "payload": {
+      "tick": 1,
+      "q_factor": 0.015625,
+      "drift": 0.984375
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.754218+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 7,
+    "payload": {
+      "tick": 2,
+      "active_voxels": 64,
+      "stable_voxels": 2
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.754227+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 8,
+    "payload": {
+      "tick": 2,
+      "energy": 1.5000000000000002,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.754232+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 9,
+    "payload": {
+      "tick": 2,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.754236+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 10,
+    "payload": {
+      "tick": 2,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.754242+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 11,
+    "payload": {
+      "tick": 2,
+      "q_factor": 0.03125,
+      "drift": 0.96875
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.759122+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 12,
+    "payload": {
+      "tick": 3,
+      "active_voxels": 64,
+      "stable_voxels": 3
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.759126+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 13,
+    "payload": {
+      "tick": 3,
+      "energy": 1.5000000000000004,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.759128+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 14,
+    "payload": {
+      "tick": 3,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.759131+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 15,
+    "payload": {
+      "tick": 3,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.759135+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 16,
+    "payload": {
+      "tick": 3,
+      "q_factor": 0.046875,
+      "drift": 0.953125
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.764176+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 17,
+    "payload": {
+      "tick": 4,
+      "active_voxels": 64,
+      "stable_voxels": 4
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.764179+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 18,
+    "payload": {
+      "tick": 4,
+      "energy": 1.5000000000000002,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.764181+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 19,
+    "payload": {
+      "tick": 4,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.764184+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 20,
+    "payload": {
+      "tick": 4,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.764188+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 21,
+    "payload": {
+      "tick": 4,
+      "q_factor": 0.0625,
+      "drift": 0.9375
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.769227+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 22,
+    "payload": {
+      "tick": 5,
+      "active_voxels": 64,
+      "stable_voxels": 5
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.769235+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 23,
+    "payload": {
+      "tick": 5,
+      "energy": 1.5,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.769238+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 24,
+    "payload": {
+      "tick": 5,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.769241+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 25,
+    "payload": {
+      "tick": 5,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.769246+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 26,
+    "payload": {
+      "tick": 5,
+      "q_factor": 0.078125,
+      "drift": 0.921875
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.774097+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 27,
+    "payload": {
+      "tick": 6,
+      "active_voxels": 64,
+      "stable_voxels": 6
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.774102+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 28,
+    "payload": {
+      "tick": 6,
+      "energy": 1.4999999999999998,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.774104+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 29,
+    "payload": {
+      "tick": 6,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.774107+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 30,
+    "payload": {
+      "tick": 6,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.774113+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 31,
+    "payload": {
+      "tick": 6,
+      "q_factor": 0.09375,
+      "drift": 0.90625
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.779081+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 32,
+    "payload": {
+      "tick": 7,
+      "active_voxels": 64,
+      "stable_voxels": 7
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.779084+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 33,
+    "payload": {
+      "tick": 7,
+      "energy": 1.5000000000000004,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.779087+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 34,
+    "payload": {
+      "tick": 7,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.779089+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 35,
+    "payload": {
+      "tick": 7,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.779093+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 36,
+    "payload": {
+      "tick": 7,
+      "q_factor": 0.109375,
+      "drift": 0.890625
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.784081+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 37,
+    "payload": {
+      "tick": 8,
+      "active_voxels": 65,
+      "stable_voxels": 8
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.784084+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 38,
+    "payload": {
+      "tick": 8,
+      "energy": 1.5,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.784086+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 39,
+    "payload": {
+      "tick": 8,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.784088+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 40,
+    "payload": {
+      "tick": 8,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.784095+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 41,
+    "payload": {
+      "tick": 8,
+      "q_factor": 0.12307692307692308,
+      "drift": 0.8769230769230769
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.789105+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 42,
+    "payload": {
+      "tick": 9,
+      "active_voxels": 66,
+      "stable_voxels": 9
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.789107+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 43,
+    "payload": {
+      "tick": 9,
+      "energy": 1.4999999999999998,
+      "norm": 0.9999999999999999
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.789111+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 44,
+    "payload": {
+      "tick": 9,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.789113+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 45,
+    "payload": {
+      "tick": 9,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.789117+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 46,
+    "payload": {
+      "tick": 9,
+      "q_factor": 0.13636363636363635,
+      "drift": 0.8636363636363636
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.794180+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "state.delta",
+    "sequence": 47,
+    "payload": {
+      "tick": 10,
+      "active_voxels": 67,
+      "stable_voxels": 10
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.794182+00:00",
+    "session_id": "manifest-demo",
+    "source": "physics-engine",
+    "event_type": "hamiltonian.frame",
+    "sequence": 48,
+    "payload": {
+      "tick": 10,
+      "energy": 1.5,
+      "norm": 1.0
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.794184+00:00",
+    "session_id": "manifest-demo",
+    "source": "virtual-toolset",
+    "event_type": "instrument.trace",
+    "sequence": 49,
+    "payload": {
+      "tick": 10,
+      "stm_height_shape": [
+        8,
+        8
+      ],
+      "spectral_peak_count": 1
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.794187+00:00",
+    "session_id": "manifest-demo",
+    "source": "ai-interpreter",
+    "event_type": "ai.anomaly",
+    "sequence": 50,
+    "payload": {
+      "tick": 10,
+      "microscopist": {
+        "ok": true,
+        "analysis": {
+          "butterfly_emerging": false,
+          "confidence": 0.5,
+          "notes": "fallback"
+        }
+      },
+      "spectroscopist": {
+        "ok": true,
+        "analysis": {
+          "resonantly_pure": true,
+          "confidence": 0.5,
+          "matched_peaks": [],
+          "notes": "fallback"
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-17T08:23:53.794191+00:00",
+    "session_id": "manifest-demo",
+    "source": "manifold-controller",
+    "event_type": "stability.harmonic",
+    "sequence": 51,
+    "payload": {
+      "tick": 10,
+      "q_factor": 0.14925373134328357,
+      "drift": 0.8507462686567164
+    }
+  }
+]

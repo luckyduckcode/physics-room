@@ -1,0 +1,11 @@
+System,Kingdom,Phylum,Class,Linearity,Energy,Dynamics
+Ideal Spring (SHO),Classical,Deterministic,Continuous (Flow),Linear,Conservative,Periodic
+Pendulum (Large Angle),Classical,Deterministic,Continuous (Flow),Non-linear,Conservative,Periodic/Librating
+Double Pendulum,Classical,Deterministic,Continuous (Flow),Non-linear,Conservative,Chaotic
+Van der Pol Oscillator,Classical,Deterministic,Continuous (Flow),Non-linear,Dissipative,Limit Cycle
+Lorenz Weather Model,Classical,Deterministic,Continuous (Flow),Non-linear,Dissipative,Strange Attractor (Chaos)
+Logistic Map,Classical,Deterministic,Discrete (Map),Non-linear,N/A,Fixed Point/Bifurcation/Chaos
+Brownian Motion,Statistical,Stochastic,Continuous,Linear (Stochastic),Dissipative/Fluctuating,Random Walk
+Hydrogen Atom (Electron),Quantum,Unitary,Continuous (Wavefunction),Linear,Conservative,Stationary States
+Qubit (Decohering),Quantum,Open System,Continuous (Master Eq),Linear (in Density Matrix),Dissipative,Decoherence/Relaxation
+Navier-Stokes (Fluid),Classical,Deterministic,Field (Infinite DoF),Non-linear,Dissipative,Turbulence

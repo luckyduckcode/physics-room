@@ -1,0 +1,40 @@
+{
+  "session_id": "manifest-demo",
+  "config": {
+    "N": 12,
+    "dt": 0.02,
+    "hbar": 1.0,
+    "omega": 1.0,
+    "phi": 2.718281828459045,
+    "lam": 0.05,
+    "kappa": 0.01,
+    "grid_shape": [
+      32,
+      32,
+      32
+    ],
+    "enable_ai": true,
+    "use_real_modules": false
+  },
+  "metadata": {
+    "config_hash": "698da2981b51f9370a176ae26f6ff4527f4feeff8a639bb6d2b4c46af020e85d",
+    "code_version": "unknown",
+    "seed": 42,
+    "created_at_ns": 1773735833743482000
+  },
+  "state": {
+    "session_id": "manifest-demo",
+    "tick": 10,
+    "active_voxels": 67,
+    "last_energy": 1.5,
+    "stable_voxels": 10,
+    "metadata": {
+      "config_hash": "698da2981b51f9370a176ae26f6ff4527f4feeff8a639bb6d2b4c46af020e85d",
+      "code_version": "unknown",
+      "seed": 42,
+      "created_at_ns": 1773735833743482000
+    }
+  },
+  "steps_run": 10,
+  "final_tick": 10
+}
