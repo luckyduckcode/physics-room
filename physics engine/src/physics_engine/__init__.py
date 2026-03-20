@@ -1,17 +1,6 @@
 from .config    import EngineConfig, CouplingConfig, SimulationResult
-from .contracts import (
-    EventEnvelope,
-    RunMetadata,
-    SessionState,
-    StartSessionRequest,
-    StartSessionResponse,
-    TickRunRequest,
-    TickRunResult,
-)
-from .coordinator import PhysicsRoomCoordinator
-from .api       import create_app
 from .engine    import PhysicsEngine
-from .log_api   import create_log_app
+from .hamiltonian import register_term, get_registered_terms
 from .operators import (
     ladder_ops,
     mat_power,
@@ -26,17 +15,9 @@ __all__ = [
     "EngineConfig",
     "CouplingConfig",
     "SimulationResult",
-    "EventEnvelope",
-    "RunMetadata",
-    "SessionState",
-    "StartSessionRequest",
-    "StartSessionResponse",
-    "TickRunRequest",
-    "TickRunResult",
-    "PhysicsRoomCoordinator",
-    "create_app",
     "PhysicsEngine",
-    "create_log_app",
+    "register_term",
+    "get_registered_terms",
     "ladder_ops",
     "mat_power",
     "position_op",
@@ -45,3 +26,4 @@ __all__ = [
     "commutator",
     "check_hermitian",
 ]
+ 

@@ -43,3 +43,9 @@ From [physics engine](physics%20engine):
 ## Notes
 - `use_real_modules=false` gives stable local fallback behavior.
 - `enable_ai=true` enables `ai.anomaly` event emission.
+
+## Benchmarks & Notebooks
+
+- See the harmonic oscillator benchmark summary: [physics engine/notebooks/BENCHMARK_RESULTS.md](physics%20engine/notebooks/BENCHMARK_RESULTS.md)
+- Notebook with runnable cell: [physics engine/notebooks/benchmark_results.ipynb](physics%20engine/notebooks/benchmark_results.ipynb)
+

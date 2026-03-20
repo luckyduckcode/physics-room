@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Callable, Optional
+from typing import Callable, Optional, Dict
 
 import numpy as np
 
@@ -19,6 +19,12 @@ class EngineConfig:
     g:      Optional[np.ndarray] = field(default=None, repr=False)
     h:      Optional[np.ndarray] = field(default=None, repr=False)
     Vcosmo: Optional[Callable[[np.ndarray], np.ndarray]] = field(default=None, repr=False)
+    # Extra pluggable Hamiltonian terms: name -> callable(ops, cfg, t) -> np.ndarray
+    extra_terms: Optional[Dict[str, Callable]] = field(default=None, repr=False)
+    # Enable optional backends
+    use_qutip: bool = False
+    # Random seed for stochastic terms (None -> system default)
+    random_seed: Optional[int] = None
 
     def __post_init__(self) -> None:
         assert self.N     >  2,  f"N must be > 2, got {self.N}"
@@ -55,3 +61,4 @@ class SimulationResult:
     energies: np.ndarray
     norms:    np.ndarray
     logs:     list = field(default_factory=list)
+ 
