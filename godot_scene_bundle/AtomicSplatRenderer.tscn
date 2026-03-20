@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[node name="AtomicSplatRenderer" type="Node3D"]
+script = ExtResource( 1 )
+
+[ext_resource name="AtomicSplatRenderer.gd" path="res://scripts/AtomicSplatRenderer.gd" type="Script"]

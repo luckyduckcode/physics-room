@@ -1,5 +1,8 @@
 from typing import Optional, Any
 from dataclasses import dataclass
+import threading
+import json
+import time
 
 try:
     # Best-effort import of existing physics engine API in workspace
@@ -84,3 +87,107 @@ class PhysicsAdapter:
             b["x"] += b["vx"] * dt
             b["y"] += b["vy"] * dt
         return self._bodies
+
+    # --- gRPC splat streaming helper ---
+    def start_splat_listener(self, host: str = 'localhost', port: int = 50051):
+        """Start a background thread that runs a local gRPC server to accept SplatClouds
+        and write them to a JSON file that Godot can load from the project.
+
+        This is a minimal convenience: for production you may want a proper IPC
+        channel into the Godot runtime or a socket-based bridge.
+        """
+        try:
+            from physics_engine.grpc._generated import splats_pb2, splats_pb2_grpc
+            import grpc
+            from concurrent import futures
+        except Exception:
+            raise RuntimeError('gRPC bindings not generated; run physics engine/scripts/generate_protos.sh')
+
+        adapter = self
+
+        class _Servicer(splats_pb2_grpc.VisualizerServicer):
+            def SendSplatCloud(self, request, context):
+                # Convert request to JSON and write to shared file
+                splats = []
+                for s in request.splats:
+                    splats.append({
+                        'atom': s.atom,
+                        'center': list(s.center),
+                        'alpha': float(s.alpha),
+                        'coeff': float(s.coeff),
+                        'color': [float(c) for c in s.color],
+                    })
+                out = {'splats': splats, 'source': request.source_id}
+                # write into godot project's res:// by using project path relative copy
+                path = 'godot_scene_bundle/splats_received.json'
+                with open(path, 'w') as f:
+                    json.dump(out, f)
+                return splats_pb2.Ack(ok=True, message='written')
+
+        def _serve():
+            server = grpc.server(futures.ThreadPoolExecutor(max_workers=2))
+            splats_pb2_grpc.add_VisualizerServicer_to_server(_Servicer(), server)
+            addr = f'{host}:{port}'
+            server.add_insecure_port(addr)
+            server.start()
+            try:
+                while True:
+                    time.sleep(60)
+            except KeyboardInterrupt:
+                server.stop(0)
+
+        t = threading.Thread(target=_serve, daemon=True)
+        t.start()
+        return t
+
+    def start_file_watcher(self, path: str = 'godot_scene_bundle/splats_received.json', notify_path: str = None, interval: float = 0.5, command: str = None, callback=None):
+        """Start a background thread that watches `path` for modifications.
+
+        On change the watcher will optionally:
+        - write a small notify file at `notify_path` (if provided),
+        - run a shell `command` (if provided),
+        - call a Python `callback(path)` (if provided).
+
+        This lets Godot poll a lightweight signal file or you can provide a
+        callback to push notifications into your runtime.
+        """
+        import os
+
+        def _watch():
+            last_mtime = None
+            while True:
+                try:
+                    if os.path.exists(path):
+                        mtime = os.path.getmtime(path)
+                        if last_mtime is None:
+                            last_mtime = mtime
+                        elif mtime != last_mtime:
+                            last_mtime = mtime
+                            # write notify file
+                            if notify_path:
+                                try:
+                                    with open(notify_path, 'w') as nf:
+                                        nf.write(str(mtime))
+                                except Exception:
+                                    pass
+                            # run command
+                            if command:
+                                try:
+                                    import subprocess
+
+                                    subprocess.Popen(command, shell=True)
+                                except Exception:
+                                    pass
+                            # call callback
+                            if callback:
+                                try:
+                                    callback(path)
+                                except Exception:
+                                    pass
+                    time.sleep(interval)
+                except Exception:
+                    time.sleep(interval)
+
+        t = threading.Thread(target=_watch, daemon=True)
+        t.start()
+        return t

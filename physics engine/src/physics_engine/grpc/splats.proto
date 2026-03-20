@@ -1,0 +1,25 @@
+syntax = "proto3";
+package physics_engine.grpc;
+
+message Splat {
+  string atom = 1;
+  repeated double center = 2; // x,y,z
+  double alpha = 3;
+  double coeff = 4;
+  repeated float color = 5; // r,g,b
+}
+
+message SplatCloud {
+  repeated Splat splats = 1;
+  string source_id = 2; // optional session id
+}
+
+message Ack {
+  bool ok = 1;
+  string message = 2;
+}
+
+service Visualizer {
+  // Push a splat cloud from Python to the Godot client or a visualizer service
+  rpc SendSplatCloud (SplatCloud) returns (Ack);
+}
