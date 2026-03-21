@@ -23,6 +23,11 @@ jobs:
         run: |
           chmod +x ./tools/package_godot_addon.sh || true
           chmod +x ./unity_plugin/package_unity_zip.sh || true
+          chmod +x ./tools/package_demo_godot.sh || true
+
+      - name: Install zip
+        run: |
+          sudo apt-get update && sudo apt-get install -y zip
 
       - name: Run Godot packaging
         run: |

@@ -12,10 +12,27 @@ rm -f "$ZIP_PATH"
 echo "Creating demo zip: $ZIP_PATH"
 (
   cd "$ROOT"
-  zip -r "$ZIP_PATH" \
-    godot_scene_bundle/scenes/example_splat_scene.tscn \
-    godot_scene_bundle/scenes/entity.tscn \
-    godot_scene_bundle/scripts/entity.gd 2>/dev/null || true
+  files=(
+    "godot_scene_bundle/scenes/example_splat_scene.tscn"
+    "godot_scene_bundle/scenes/entity.tscn"
+    "godot_scene_bundle/scripts/entity.gd"
+  )
+  found=()
+  for f in "${files[@]}"; do
+    if [ -e "$f" ]; then
+      found+=("$f")
+    else
+      echo "Warning: missing file $f — skipping"
+    fi
+  done
+  if [ ${#found[@]} -eq 0 ]; then
+    echo "No demo files found; creating empty zip with README" >/dev/stderr
+    echo "Demo files not present" > demo-README.txt
+    zip -r "$ZIP_PATH" demo-README.txt >/dev/null
+    rm -f demo-README.txt
+  else
+    zip -r "$ZIP_PATH" "${found[@]}"
+  fi
 )
 
 echo "Created $ZIP_PATH"
