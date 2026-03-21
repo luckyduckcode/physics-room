@@ -21,5 +21,6 @@ PYTHONPATH="physics engine/src" .venv/bin/python "physics engine/examples/export
 
 Notes
 - The loader expects an ASCII PLY with per-vertex: x y z r g b alpha coeff.
-- Replace the loader with a higher-performance GPU splat shader for production.
+- The loader expects an ASCII PLY with per-vertex: x y z r g b alpha coeff.
+- A simple Gaussian splat shader scaffold is included at `godot_scene_bundle/addons/physics_room_splats/shaders/gaussian_splat.shader` — use it as a starting point for a production GPU splat material (tweak `falloff` and `intensity`, or replace with a more advanced additive/LOD shader).
 - To support Unity/Unreal, create `unity_plugin/` or `unreal_plugin/` stubs and implement runtime loaders that read the same PLY/JSON exported format.
